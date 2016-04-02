@@ -1,6 +1,6 @@
 ---
 # tasks file for sbaerlocher.epel
-- name: install EPEL repo.
+- name: install EPEL repo
   yum:
     name: "{{ epel_repo_url }}"
     state: present
@@ -9,7 +9,7 @@
   retries: 5
   delay: 10
 
-- name: import EPEL GPG key.
+- name: import EPEL GPG key
   rpm_key:
     key: "{{ epel_repo_gpg_key_url }}"
     state: present
