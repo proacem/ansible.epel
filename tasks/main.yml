@@ -8,3 +8,5 @@
   until: '"failed" not in result'
   retries: 5
   delay: 10
+  tags:
+    - packages
