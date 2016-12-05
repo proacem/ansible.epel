@@ -1,5 +1,6 @@
 ---
 # tasks file for sbaerlocher.epel
+
 - name: install EPEL repo
   yum:
     name: "{{ epel_repo_url }}"
