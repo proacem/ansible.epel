@@ -16,9 +16,7 @@ This role only is needed/runs on RHEL and its derivatives.
 
 ## Role Variables
 
-| Variable             | Default     | Comments (type)                                   |
-| :---                 | :---        | :---                                              |
-| ```epel_repo_url```| ```"https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"``` | url of epel |
+None
 
 ## Dependencies
 

@@ -2,12 +2,16 @@
 # tasks file for sbaerlocher.epel
 
 - name: install EPEL repo
-  yum:
-    name: "{{ epel_repo_url }}"
-    state: present
-  register: result
-  until: '"failed" not in result'
-  retries: 5
-  delay: 10
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+  tags:
+    - packages
+
+- name: import the GPG key used to sign the packages
+  rpm_key: 
+    state: present 
+    key: http://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
   tags:
     - packages
