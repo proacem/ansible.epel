@@ -1,13 +1,15 @@
 # Ansible Role: EPEL Repository
 
+[![Build Status](https://travis-ci.org/sbaerlocher/ansible.epel.svg?branch=master)](https://travis-ci.org/sbaerlocher/ansible.epel) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://sbaerlo.ch/licence) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-epel-blue.svg)](https://galaxy.ansible.com/sbaerlocher/epel)
+
 ## Description
 
 Installs the EPEL repository (Extra Packages for Enterprise Linux) for RHEL/CentOS.
 
 ## Installation
 
-```
-$ ansible-galaxy install sbaerlocher.epel
+```bash
+ansible-galaxy install sbaerlocher.epel
 ```
 
 ## Requirements
@@ -35,6 +37,8 @@ None
 ### 1.2
 
 * update year
+* new style check
+* support become
 
 ### 1.1
 
@@ -47,11 +51,11 @@ None
 ## Author
 
 * [Simon Bärlocher](https://sbaerlocher.ch)
- 
+
 ## License
 
 This project is under the MIT License. See the [LICENSE](https://sbaerlo.ch/licence) file for the full license text.
 
 ## Copyright
 
-(c) 2017, Simon Bärlocher
+(c) 2018, Simon Bärlocher
