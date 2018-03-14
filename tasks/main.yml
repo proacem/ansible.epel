@@ -2,6 +2,7 @@
 # tasks file for sbaerlocher.epel
 
 - name: install EPEL repo
+  become: true
   yum_repository:
     name: epel
     description: EPEL YUM repo
@@ -10,6 +11,7 @@
     - packages
 
 - name: import the GPG key used to sign the packages
+  become: true
   rpm_key:
     state: present
     key: http://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
